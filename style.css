@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
 
 body {
@@ -21,7 +21,7 @@ header {
     corner-shape: squircle;
 }
 
- .logo {
+.logo {
     width: 68px;
 }
 
@@ -54,11 +54,12 @@ header {
     margin-top: 40px;
     background-color: #0e0e0e;
     border-radius: 10px;
+    box-shadow: 6px 3px 6px 2px #0e0e0e46;
 }
 
 .avatar_wrapper {
     width: 100%;
-    height: 280px;
+    height: 50vh;
     background: #00C6AE;
     display: flex;
     justify-content: center;
@@ -70,6 +71,62 @@ header {
 }
 
 .avatar {
-    width: 80%;
+    width: 70%;
     margin-bottom: -10px;
 } 
+
+.floating_sos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: fixed;
+    bottom: 4px;
+    right: 24px;
+}
+
+.sos {
+    width: 64px;
+    height: 64px;
+    background-color: #efefef;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(100);
+    text-decoration: none;
+}
+
+.sos:hover {
+    filter: grayscale(0);
+}
+
+.sos_icon {
+    width: 70%;
+}
+
+.btn_wrapper {
+    width: 90%;
+    margin-top: 24px;
+    display: flex;
+    gap: 18px;
+}
+
+.hero_cta {
+    padding: 12px 28px;
+    background-color: #0e0e0e;
+    color: #efefef;
+    box-shadow: 5px 5px #00C6AE;
+    font-weight: 700;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.25s ease-in-out;
+    border: 1.5px solid #0e0e0e;
+}
+
+.hero_cta:hover {
+    background-color: #efefef;
+    color: #0e0e0e;
+}
