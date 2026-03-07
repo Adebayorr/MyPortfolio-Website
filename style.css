@@ -18,7 +18,9 @@ header {
     justify-content: space-between;
     align-items: center;
     border-radius: 0px 0px 48px 48px;
-    corner-shape: squircle;
+    /* corner-shape: squircle; */
+    position: relative;
+    /* overflow: hidden; */
 }
 
 .logo {
@@ -32,6 +34,20 @@ header {
 
 .nav_links {
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #FFDD55;
+    gap: 16px;
+    padding: 24px 16px;
+    position: absolute;
+    /* transform: translateX(1000px); */
+}
+
+.nav_link {
+    text-decoration: none;
+    color: #efefef;
+    font-size: 32px;
+
 }
 
 .hero {
@@ -48,7 +64,9 @@ header {
     font-weight: 600;
     color: #474a57;
     margin-top: 10px;
+    width: 250px;
 }
+
 
 .hero_avatar-n-sos {
     display: flex;
@@ -56,6 +74,11 @@ header {
     align-items: stretch;
     margin-top: 40px;
 }
+
+#large_screen {
+    display: none;
+}
+
 
 .avatar_backdrop {
     width: 80%;
@@ -106,7 +129,7 @@ header {
     text-decoration: none;
 }
 
-.sos:hover {
+.sos:hover, .sos:active {
     filter: grayscale(0);
 }
 
@@ -133,7 +156,7 @@ header {
     border: 1.5px solid #0e0e0e;
 }
 
-.hero_cta:hover {
+.hero_cta:hover, .hero_cta:active {
     background-color: #efefef;
     color: #0e0e0e;
 }
@@ -145,3 +168,79 @@ header {
     }
 }
 
+
+/* WIDTH > 1020px */
+
+@media screen and (min-width: 1020px) {
+    header {
+    padding: 24px 64px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .nav_links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 48px;
+        position: relative;
+        background-color: unset;
+    }
+
+    .nav_link {
+        font-weight: 500;
+        transition: color 0.25s ease-in-out;
+    }
+
+    .nav_link:hover, .nav_link:active {
+        color: #FFDD55;
+    }
+
+    .hero {
+        position: relative;
+        padding: 64px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 45% 45%;
+        align-items: center;
+        gap: 100px;
+        
+    }
+
+    .hero_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hero_sub {
+        width: unset;
+    }
+
+    .hero_cta {
+        padding: 12px 24px;
+        font-size: 32px;
+    }
+
+    .avatar_backdrop {
+        width: 60%;
+        height: 55vh;
+    }
+
+    .hero_avatar-n-sos {
+        justify-content: end;
+        align-items: end;
+        gap: 44px;
+    }
+
+    #mobile {
+        display: none;
+    }
+
+    #large_screen {
+        display: flex;
+        gap: 24px;
+    }
+}
