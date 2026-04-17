@@ -27,9 +27,6 @@ header {
     width: 68px;
 }
 
-nav {
-    overflow: visible;
-}
 .hamburger {
     width: 24px;
     cursor: pointer;
@@ -38,17 +35,17 @@ nav {
     overflow: visible;
 }
 
-nav:active .line_top {
+.line_top {
     transform: rotate(45deg) translate(-5px, 12px);
     transform-origin: center;
 }
 
-nav:active .line_mid {
+.line_mid {
     transform: scale(0);
     transform-origin: center;
 }
 
-nav:active .line_bot {
+.line_bot {
     transform: rotate(-45deg) translate(2px, -7px);
     transform-origin: center;
 }
@@ -66,7 +63,7 @@ nav:active .line_bot {
 
 }
 
-nav:active .nav_links {
+.open_links {
     display: flex;
     transform: translateX(-50px);
     position: fixed;
@@ -219,6 +216,7 @@ nav:active .nav_links {
         gap: 48px;
         position: relative;
         background-color: unset;
+        transform: unset;
     }
 
     .nav_link {
